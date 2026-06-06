@@ -30,9 +30,11 @@
 
 ### 📂 数据资产解耦说明 (Decoupled Dataset)
 为了保持代码仓库的轻量化，本项目对大型数据资产与运行时缓存进行了**解耦隔离**：
-* **本地示例数据**：项目自带的 dataset/ 仅包含**极简示例数据**（[career.json](file:///D:/1/CS&AI/个人项目/ALL/job_system - 交付版本/dataset/career.json) 仅含 5 条样本岗位）及标准词典框架，供您开箱即用快速启动。
-* **全量解耦数据物理路径**：D:\1\CS&AI\个人项目\ALL\dataset
-* **使用全量数据方法**：若需使用包含 10,000+ 岗位画像主数据、200MB+ 向量模型缓存的完整数据库进行测试，请**直接将全量解耦路径下的 dataset/ 文件夹整体复制并覆盖到本项目根目录下**即可。覆盖后，Git 会根据本地的 .gitignore 自动忽略大体积文件，保持仓库整洁。\n\n### 🏷️ 核心机制：专业名词全英文对齐
+* **本地示例数据**：项目自带的 `dataset/` 仅包含**极简示例数据**（`dataset/career.json` 仅含 5 条样本岗位）及标准词典框架，供您开箱即用快速启动。
+* **全量解耦数据物理路径**：`D:\1\CS&AI\个人项目\ALL\dataset`
+* **使用全量数据方法**：若需使用包含 10,000+ 岗位画像主数据、200MB+ 向量模型缓存的完整数据库进行测试，请**直接将全量解耦路径下的 `dataset/` 文件夹整体复制并覆盖到本项目根目录下**即可。覆盖后，Git 会根据本地的 `.gitignore` 自动忽略大体积文件，保持仓库整洁。
+
+### 🏷️ 核心机制：专业名词全英文对齐
 为了消除中文翻译的多样性与技术边界的模糊性（例如“响应式”对“Responsive”、“深度学习”对“Deep Learning”），系统在向量库构建、标签字典管理、以及精排匹配计算中，**专业技术名词一律统一使用英文标准词（English Tags）**。当学生使用中文进行检索或简历解析时，系统会自动在“选择词体验层”完成中文到英文标准词的映射，再将英文 Tag 带入后端的向量匹配和相似度计算中，从根本上消除了译名碎片化对匹配精度的负面影响。
 
 ### 🌟 核心特色
@@ -207,7 +209,7 @@ python start_all.py
 
 > [!IMPORTANT]
 > **请等待 8000 后端真正初始化完成**：
-> 首次启动时，`8000` 端口后端服务会读取 [dataset/career.json](file:///D:/1/CS&AI/个人项目/ALL/job_system - 交付版本/dataset/career.json) 并自动在 `dataset/runtime_data/` 中重建运行时内存索引（约需 10 秒左右）。
+> 首次启动时，`8000` 端口后端服务会读取 [dataset/career.json](dataset/career.json) 并自动在 `dataset/runtime_data/` 中重建运行时内存索引（约需 10 秒左右）。
 > 建议在控制台看到 `Runtime state initialized...` 日志后，再开始在前端页面上操作匹配或进行画像编辑。
 
 ---
@@ -256,6 +258,6 @@ $$\\text{Score} = w_{\\text{stack}} \\cdot S_{\\text{stack}} + w_{\\text{cap}} \
 * **挑战岗 (Reach)**：存在一定的核心技能缺口，或者目标能级显著高于当前能级，但适合作为学习成长目标。
 
 > [!NOTE]
-> 欲深入了解打分与分档的详细矩阵和公式，请参阅设计文档 [matching_algorithm.md](file:///D:/1/CS&AI/个人项目/ALL/job_system - 交付版本/docs/matching_algorithm.md)。
+> 欲深入了解打分与分档的详细矩阵和公式，请参阅设计文档 [docs/matching_algorithm.md](docs/matching_algorithm.md)。
 
 
