@@ -1,5 +1,5 @@
 # 职途星：智能人岗匹配与数据治理系统 (AI-Driven Person-Job Matching & Data Governance System)
-
+>注：文案由Gemini-3.5-flash整合而成，暂时未做精细调整。措辞略有夸大。
 
 <p align="center">
   <img src="logo.png" alt="System Logo" width="280" />
@@ -42,7 +42,6 @@
 ### 📂 数据资产解耦说明 (Decoupled Dataset)
 为了保持代码仓库的轻量化，本项目对大型数据资产与运行时缓存进行了**解耦隔离**：
 * **本地示例数据**：项目自带的 `dataset/` 仅包含**极简示例数据**（`dataset/career.json` 仅含 5 条样本岗位）及标准词典框架，供您开箱即用快速启动。
-* **全量解耦数据物理路径**：`D:\1\CS&AI\个人项目\ALL\dataset`
 * **使用全量数据方法**：若需使用包含 10,000+ 岗位画像主数据、200MB+ 向量模型缓存的完整数据库进行测试，请**直接将全量解耦路径下的 `dataset/` 文件夹整体复制并覆盖到本项目根目录下**即可。覆盖后，Git 会根据本地的 `.gitignore` 自动忽略大体积文件，保持仓库整洁。
 
 ### 🏷️ 核心机制：专业名词全英文对齐
