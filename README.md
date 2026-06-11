@@ -1,5 +1,6 @@
 # 职途星：智能人岗匹配与数据治理系统 (AI-Driven Person-Job Matching & Data Governance System)
 
+
 <p align="center">
   <img src="logo.png" alt="System Logo" width="280" />
 </p>
@@ -18,6 +19,15 @@
   <img src="https://img.shields.io/badge/AI-OpenAI--Compatible%20LLM%20%7C%20Embedding-FF6F61?logo=openai&logoColor=white" alt="AI Stack" />
 </p>
 
+<p align="center">
+  <a href="https://www.bilibili.com/video/BV1HwEi6pECu" target="_blank">
+    <img src="https://img.shields.io/badge/Bilibili-视频演示-blue?logo=bilibili&logoColor=white&color=FB7299" alt="Bilibili 视频演示">
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://ztx.6767.chat" target="_blank">
+    <img src="https://img.shields.io/badge/Demo-在线体验-brightgreen?logo=google-chrome&logoColor=white&color=4CAF50" alt="在线体验">
+  </a>
+</p>
 ---
 
 ## 💡 项目背景与核心特色
